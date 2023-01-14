@@ -1,0 +1,197 @@
+{
+  "showLegend": true,
+  "contextMenu": {
+    "ZoomTo": true,
+    "Transparency": true,
+    "EnableOrDisablePopup": true,
+    "MoveupOrMovedown": true,
+    "OpenAttributeTable": true,
+    "DescriptionOrShowItemDetailsOrDownload": true
+  },
+  "layerOptions": {
+    "Coastline_323": {
+      "display": true,
+      "group": "Distance to Coastline"
+    },
+    "CPs_Distance_to_Coast_2810": {
+      "display": true,
+      "group": "Distance to Coastline"
+    },
+    "CPs_Distance_to_Domestic_Wells_2745": {
+      "display": true,
+      "group": "Distance to Domestic_Wells"
+    },
+    "CPs_Distance_to_Municipal_Wells_6559": {
+      "display": true,
+      "group": "Distance to Municipal_Wells"
+    },
+    "CPs_In_WellCZ_B_8367": {
+      "display": true,
+      "group": "Capture_Zone_B"
+    },
+    "CPs_In_WellCZ_C_6942": {
+      "display": true,
+      "group": "Capture_Zone_C"
+    },
+    "Streams_NHD_8095": {
+      "display": true,
+      "group": "Distance to Streams"
+    },
+    "Wetlands_emergent_ponds_3803": {
+      "display": true,
+      "group": "Distance to Streams"
+    },
+    "CPs_dist2_Strm_Wtlnd_m_9985": {
+      "display": true,
+      "group": "Streams"
+    },
+    "CPs_Soil_Suitability_Rank_9420": {
+      "display": true,
+      "group": "Soils"
+    },
+    "NRCS_SatHydroCond_v2_692": {
+      "display": true,
+      "group": "Soils"
+    },
+    "NRCS_DepthtoBedRock_6175": {
+      "display": true,
+      "group": "Soils"
+    },
+    "NRCS_Flood_Frequency_7648": {
+      "display": true,
+      "group": "Soils"
+    },
+    "NRCS_RockFrags_v2_5421": {
+      "display": true,
+      "group": "Soils"
+    },
+    "Horizontal_SLR_Flood_2030_7040": {
+      "display": true,
+      "group": "SLR_2030"
+    },
+    "CPs_In_SLR_2030_4620": {
+      "display": true,
+      "group": "SLR_2030"
+    },
+    "Horizontal_SLR_Flood_2050_2817": {
+      "display": true,
+      "group": "SLR_2050"
+    },
+    "CPs_In_SLR_2050_3718": {
+      "display": true,
+      "group": "SLR_2050"
+    },
+    "Horizontal_SLR_Flood_2100_707": {
+      "display": true,
+      "group": "SLR_2100"
+    },
+    "CPs_In_SLR_2100_3918": {
+      "display": true,
+      "group": "SLR_2100"
+    },
+    "GW_Flowpaths_7643": {
+      "display": true,
+      "group": "Groundwater_Flowpaths"
+    },
+    "Coral_priority_8434": {
+      "display": true,
+      "group": "Coral"
+    },
+    "CPs_Coral_Rank_7455": {
+      "display": true,
+      "group": "Coral"
+    },
+    "CPs_RFish_rank_8188": {
+      "display": true,
+      "group": "Reef_Fish"
+    },
+    "Fish_priority_7358": {
+      "display": true,
+      "group": "Reef_Fish"
+    },
+    "HI_Lifeguard_Towers_3019": {
+      "display": true,
+      "group": "Swimming_Beaches"
+    },
+    "CPs_Swim_beach_9819": {
+      "display": true,
+      "group": "Swimming_Beaches"
+    },
+    "CPs_rainfall_in_6245": {
+      "display": true,
+      "group": "Rainfall"
+    },
+    "CPs_Coastline_Usage_User_days_8752": {
+      "display": true,
+      "group": "Coastal_Visitation"
+    },
+    "183a5c00001-layer-41": {
+      "display": true,
+      "group": "Nearshore Circulation"
+    },
+    "Statewide_flikr_visitation_cslls_2278": {
+      "display": true,
+      "group": "Coastal_Visitation"
+    },
+    "CPs_OSDS_Density_7893": {
+      "display": true,
+      "group": "OSDS_Density"
+    },
+    "CPs_Dep_to_Water_m_1757": {
+      "display": true,
+      "group": "Groundwater_Depth"
+    },
+    "kauai_GW_elev_m_5060": {
+      "display": true,
+      "group": "Groundwater_Depth"
+    },
+    "kauai_GW_elev_m_5060_0": {
+      "display": true
+    },
+    "Oahu_GW_elev_m_5812": {
+      "display": true,
+      "group": "Groundwater_Depth"
+    },
+    "Oahu_GW_elev_m_5812_0": {
+      "display": true
+    },
+    "maui_GW_elev_m_5860": {
+      "display": true,
+      "group": "Groundwater_Depth"
+    },
+    "maui_GW_elev_m_5860_0": {
+      "display": true
+    },
+    "kml_5353": {
+      "display": true,
+      "group": "Rainfall"
+    },
+    "kml_5353_folder_0": {
+      "display": true
+    },
+    "kml_5353_folder_1": {
+      "display": true
+    },
+    "Density_of_CPs_tif_6967": {
+      "display": true,
+      "group": "OSDS_Density"
+    },
+    "Density_of_CPs_tif_6967_0": {
+      "display": true
+    },
+    "183a5ad0ecf-layer-40": {
+      "display": true,
+      "group": "Nearshore Circulation"
+    },
+    "183a5ad0ecf-layer-40_0": {
+      "display": true
+    },
+    "BI_GW_elev_m_92": {
+      "display": true,
+      "group": "Groundwater_Depth"
+    },
+    "BI_GW_elev_m_92_0": {
+      "display": true
+    }
+  }
+}

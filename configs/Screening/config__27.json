@@ -1,0 +1,1408 @@
+{
+  "aoiTabText": "Draw an area of interest (limit 1,000 features)",
+  "reportTabText": "Prep download",
+  "placenameButtonText": "Place name",
+  "drawToolsButtonText": "Draw",
+  "shapefileButtonText": "Shapefile",
+  "coordinatesButtonText": "Coordinates",
+  "showPlacenameWidget": false,
+  "showDrawToolsWidget": true,
+  "showShapefileWidget": true,
+  "showCoordinatesWidget": false,
+  "allowShapefilesUpload": false,
+  "areaUnits": "Acres",
+  "maxFeaturesForAnalysis": 1000,
+  "searchTolerance": 20,
+  "traverseUnit": "uSSurveyFeet",
+  "traverseDirectionUnit": "decimalDegree",
+  "defaultBufferDistance": 0,
+  "defaultBufferUnit": "UNIT_STATUTE_MILE",
+  "reportSettings": {
+    "printTaskURL": "https://utility.arcgisonline.com/arcgis/rest/services/Utilities/PrintingTools/GPServer/Export%20Web%20Map%20Task",
+    "footnote": "",
+    "logo": "${appPath}/widgets/Screening/images/default-logo.png",
+    "columnTitleColor": "#c6d9ec",
+    "reportTitle": "Data for Area of Interest",
+    "noDataConfiguredText": "No Data",
+    "naTextConfiguredValue": "N/A",
+    "customOptions": [],
+    "defaultPrintOption": "Letter ANSI A Portrait",
+    "displaySummaryInReport": true,
+    "hideZeroValueRow": false,
+    "hideNullValueRow": false
+  },
+  "searchSourceSettings": {
+    "allPlaceholder": "",
+    "showInfoWindowOnSelect": true,
+    "sources": [
+      {
+        "url": "http://geodata.hawaii.gov/arcgis/rest/services/Geocoding/USA/GeocodeServer",
+        "name": "Hawaii Geocoder - No Cost - Use First",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "Hawaii Geocoder - No Cost - Use First",
+        "countryCode": "",
+        "maxSuggestions": 6,
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "enableLocalSearch": false,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000,
+        "type": "locator"
+      },
+      {
+        "name": "ArcGIS World Geocoding Service",
+        "url": "https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer",
+        "singleLineFieldName": "SingleLine",
+        "placeholder": "ArcGIS World Geocoding Service",
+        "maxResults": 6,
+        "searchInCurrentMapExtent": false,
+        "type": "locator",
+        "enableLocalSearch": true,
+        "localSearchMinScale": 300000,
+        "localSearchDistance": 50000
+      }
+    ]
+  },
+  "placenameSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "drawToolSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "shapefileSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "coordinatesSymbology": {
+    "point": {
+      "angle": 0,
+      "xoffset": 0,
+      "yoffset": 0,
+      "type": "esriPMS",
+      "url": null,
+      "imageData": "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",
+      "contentType": "image/png",
+      "width": 24.99975,
+      "height": 24.99975
+    },
+    "polyline": {
+      "color": [
+        0,
+        0,
+        0,
+        255
+      ],
+      "width": 4,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "polygon": {
+      "color": [
+        136,
+        136,
+        136,
+        63
+      ],
+      "outline": {
+        "color": [
+          112,
+          112,
+          112,
+          255
+        ],
+        "width": 1,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    },
+    "aoiSymbol": {
+      "color": [
+        255,
+        255,
+        255,
+        0
+      ],
+      "outline": {
+        "color": [
+          255,
+          0,
+          0,
+          255
+        ],
+        "width": 1.5,
+        "type": "esriSLS",
+        "style": "esriSLSSolid"
+      },
+      "type": "esriSFS",
+      "style": "esriSFSSolid"
+    }
+  },
+  "aoiSymbol": {
+    "color": [
+      255,
+      255,
+      255,
+      0
+    ],
+    "outline": {
+      "color": [
+        255,
+        0,
+        0,
+        255
+      ],
+      "width": 1.5,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    },
+    "type": "esriSFS",
+    "style": "esriSFSSolid"
+  },
+  "layers": [
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Coast/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Distance_to_Coast_2810",
+      "label": "",
+      "layerName": "CPs_Distance_to_Coast",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "dist2_coas": {
+          "fieldName": "dist2_coas",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Coast/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Domestic_Wells/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Distance_to_Domestic_Wells_2745",
+      "label": "",
+      "layerName": "CPs_Distance_to_Domestic_Wells",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "dist2_DomW": {
+          "fieldName": "dist2_DomW",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Domestic_Wells/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Municipal_Wells/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Distance_to_Municipal_Wells_6559",
+      "label": "",
+      "layerName": "CPs_Distance_to_Municipal_Wells",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "dist2_MunW": {
+          "fieldName": "dist2_MunW",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Municipal_Wells/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_B/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_In_WellCZ_B_8367",
+      "label": "",
+      "layerName": "CPs_In_WellCZ_B",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "In_WellCZ_": {
+          "fieldName": "In_WellCZ_",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_B/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_C/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_In_WellCZ_C_6942",
+      "label": "",
+      "layerName": "CPs_In_WellCZ_C",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "In_WellCZ_": {
+          "fieldName": "In_WellCZ_",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_C/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_dist2_Strm_Wtlnd_m/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_dist2_Strm_Wtlnd_m_9985",
+      "label": "",
+      "layerName": "CPs_dist2_Strm_Wtlnd_m",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "dist2_Strm": {
+          "fieldName": "dist2_Strm",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_dist2_Strm_Wtlnd_m/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Soil_Suitability_Rank/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Soil_Suitability_Rank_9420",
+      "label": "",
+      "layerName": "CPs_Soil_Suitability_Rank",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Soil_Suita": {
+          "fieldName": "Soil_Suita",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Soil_Suitability_Rank/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2030/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_In_SLR_2030_4620",
+      "label": "",
+      "layerName": "CPs_In_SLR_2030",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "InSLR2030": {
+          "fieldName": "InSLR2030",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2030/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2050/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_In_SLR_2050_3718",
+      "label": "",
+      "layerName": "CPs_In_SLR_2050",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "InSLR2050": {
+          "fieldName": "InSLR2050",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2050/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2100/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_In_SLR_2100_3918",
+      "label": "",
+      "layerName": "CPs_In_SLR_2100",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "InSLR2100": {
+          "fieldName": "InSLR2100",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2100/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coral_Rank/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Coral_Rank_7455",
+      "label": "",
+      "layerName": "CPs_Coral_Rank",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Coral_rank": {
+          "fieldName": "Coral_rank",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coral_Rank/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_RFish_rank/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_RFish_rank_8188",
+      "label": "",
+      "layerName": "CPs_RFish_rank",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "RFish_rank": {
+          "fieldName": "RFish_rank",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_RFish_rank/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Swim_beach/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Swim_beach_9819",
+      "label": "",
+      "layerName": "CPs_Swim_beach",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Swim_beach": {
+          "fieldName": "Swim_beach",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Swim_beach/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coastline_Usage_User_days/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Coastline_Usage_User_days_8752",
+      "label": "",
+      "layerName": "CPs_Coastline_Usage_User_days",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "UserDays": {
+          "fieldName": "UserDays",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coastline_Usage_User_days/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_rainfall_in/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_rainfall_in_6245",
+      "label": "",
+      "layerName": "CPs_rainfall_in",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "rainfall_i": {
+          "fieldName": "rainfall_i",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_rainfall_in/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_OSDS_Density/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_OSDS_Density_7893",
+      "label": "",
+      "layerName": "CPs_OSDS_Density",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "OSDS_Densi": {
+          "fieldName": "OSDS_Densi",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_OSDS_Density/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    },
+    {
+      "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Dep_to_Water_m/FeatureServer/0",
+      "geometryType": "esriGeometryPoint",
+      "id": "CPs_Dep_to_Water_m_1757",
+      "label": "",
+      "layerName": "CPs_Dep_to_Water_m",
+      "layerVersion": 10.81,
+      "selectedFields": {
+        "X": {
+          "fieldName": "X",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Y": {
+          "fieldName": "Y",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Island": {
+          "fieldName": "Island",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "TMK": {
+          "fieldName": "TMK",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Uid": {
+          "fieldName": "Uid",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        },
+        "Dep_to_Wat": {
+          "fieldName": "Dep_to_Wat",
+          "visible": true,
+          "isEditable": true,
+          "label": null
+        }
+      },
+      "layerId": "0",
+      "baseURL": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Dep_to_Water_m/FeatureServer/",
+      "sortInfo": {
+        "sortOrder": "Asc",
+        "sortingField": "esriCTCountField"
+      }
+    }
+  ],
+  "showCircleTool": true,
+  "groupbyfieldCheckBoxStatus": true,
+  "allowVisibleLayerAnalysisOnly": false,
+  "lengthUnits": "Feet",
+  "downloadSettings": {
+    "type": "syncEnable",
+    "layers": [
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Coast/FeatureServer/0",
+        "layerName": "CPs_Distance_to_Coast",
+        "id": "CPs_Distance_to_Coast_2810",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Domestic_Wells/FeatureServer/0",
+        "layerName": "CPs_Distance_to_Domestic_Wells",
+        "id": "CPs_Distance_to_Domestic_Wells_2745",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Distance_to_Municipal_Wells/FeatureServer/0",
+        "layerName": "CPs_Distance_to_Municipal_Wells",
+        "id": "CPs_Distance_to_Municipal_Wells_6559",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_B/FeatureServer/0",
+        "layerName": "CPs_In_WellCZ_B",
+        "id": "CPs_In_WellCZ_B_8367",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_WellCZ_C/FeatureServer/0",
+        "layerName": "CPs_In_WellCZ_C",
+        "id": "CPs_In_WellCZ_C_6942",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_dist2_Strm_Wtlnd_m/FeatureServer/0",
+        "layerName": "CPs_dist2_Strm_Wtlnd_m",
+        "id": "CPs_dist2_Strm_Wtlnd_m_9985",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Soil_Suitability_Rank/FeatureServer/0",
+        "layerName": "CPs_Soil_Suitability_Rank",
+        "id": "CPs_Soil_Suitability_Rank_9420",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2030/FeatureServer/0",
+        "layerName": "CPs_In_SLR_2030",
+        "id": "CPs_In_SLR_2030_4620",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2050/FeatureServer/0",
+        "layerName": "CPs_In_SLR_2050",
+        "id": "CPs_In_SLR_2050_3718",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_In_SLR_2100/FeatureServer/0",
+        "layerName": "CPs_In_SLR_2100",
+        "id": "CPs_In_SLR_2100_3918",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coral_Rank/FeatureServer/0",
+        "layerName": "CPs_Coral_Rank",
+        "id": "CPs_Coral_Rank_7455",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_RFish_rank/FeatureServer/0",
+        "layerName": "CPs_RFish_rank",
+        "id": "CPs_RFish_rank_8188",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Swim_beach/FeatureServer/0",
+        "layerName": "CPs_Swim_beach",
+        "id": "CPs_Swim_beach_9819",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Coastline_Usage_User_days/FeatureServer/0",
+        "layerName": "CPs_Coastline_Usage_User_days",
+        "id": "CPs_Coastline_Usage_User_days_8752",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_rainfall_in/FeatureServer/0",
+        "layerName": "CPs_rainfall_in",
+        "id": "CPs_rainfall_in_6245",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_OSDS_Density/FeatureServer/0",
+        "layerName": "CPs_OSDS_Density",
+        "id": "CPs_OSDS_Density_7893",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      },
+      {
+        "url": "https://services1.arcgis.com/x4h61KaW16vFs7PM/arcgis/rest/services/CPs_Dep_to_Water_m/FeatureServer/0",
+        "layerName": "CPs_Dep_to_Water_m",
+        "id": "CPs_Dep_to_Water_m_1757",
+        "allowDownload": true,
+        "downloadingFileOption": [
+          "csv"
+        ]
+      }
+    ],
+    "extractDataTaskURL": "",
+    "downloadingFileOptions": [
+      "csv"
+    ]
+  },
+  "drawToolSelectableLayers": [],
+  "showPointTool": false,
+  "showPolylineTool": false,
+  "showExtentTool": false,
+  "showPolygonTool": true
+}
